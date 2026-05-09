@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description"
+    content="Discover the innovative world of Apple and shop everything iPhone, iPad, Apple Watch, Mac, and Apple TV, plus explore accessories, entertainment, and expert device support.">
+  <title>Apple</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ─────────────────────────────────────────────────────────
+     CSS-ONLY MOBILE NAV  (checkbox trick, zero JS)
+───────────────────────────────────────────────────────────── -->
+  <input type="checkbox" id="nav-check" class="nav-check sr-only" aria-hidden="true">
+
+  <nav class="nav" aria-label="Global navigation">
+    <div class="nav-inner">
+
+      <!-- ══ DESKTOP LIST ══ -->
+      <ul class="nav-list" role="list">
+        <li class="nav-logo">
+          <a href="https://www.apple.com/" aria-label="Apple">
+            <img src="assets/images/apple-logo.png" alt="Apple" width="15" height="18">
+          </a>
+        </li>
+        <li class="nav-item"><a href="https://www.apple.com/us/shop/goto/store">Store</a></li>
+        <li class="nav-item"><a href="https://www.apple.com/mac/">Mac</a></li>
+        <li class="nav-item"><a href="https://www.apple.com/ipad/">iPad</a></li>
+        <li class="nav-item"><a href="https://www.apple.com/iphone/">iPhone</a></li>
+        <li class="nav-item"><a href="https://www.apple.com/watch/">Watch</a></li>
+        <li class="nav-item"><a href="https://www.apple.com/apple-vision-pro/">Vision</a></li>
+        <li class="nav-item"><a href="https://www.apple.com/airpods/">AirPods</a></li>
+        <li class="nav-item"><a href="https://www.apple.com/tv-home/">TV &amp; Home</a></li>
+        <li class="nav-item"><a href="https://www.apple.com/entertainment/">Entertainment</a></li>
+        <li class="nav-item"><a href="https://www.apple.com/us/shop/goto/buy_accessories">Accessories</a></li>
+        <li class="nav-item"><a href="https://support.apple.com/">Support</a></li>
+        <!-- Search -->
+        <li class="nav-item nav-icon">
+          <a href="https://www.apple.com/us/search" aria-label="Search apple.com">
+            <svg width="15" height="15" viewBox="0 0 50 50" aria-hidden="true" focusable="false">
+              <path
+                d="M21 3C11.6 3 4 10.6 4 20s7.6 17 17 17c3.35 0 6.48-.98 9.09-2.66l12.28 12.28 4.25-4.25L34.47 30.3A16.88 16.88 0 0 0 38 20c0-9.4-7.6-17-17-17zm0 4c7.2 0 13 5.8 13 13S28.2 33 21 33 8 27.2 8 20 13.8 7 21 7z" />
+            </svg>
+          </a>
+        </li>
+        <!-- Bag -->
+        <li class="nav-item nav-icon">
+          <a href="https://www.apple.com/us/shop/goto/bag" aria-label="Shopping Bag">
+            <svg width="14" height="17" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path
+                d="M18.5 10H17V7a5 5 0 0 0-10 0v3H5.5A1.5 1.5 0 0 0 4 11.5l1.5 9A1.5 1.5 0 0 0 7 22h10a1.5 1.5 0 0 0 1.5-1.5l1.5-9A1.5 1.5 0 0 0 18.5 10zM9 7a3 3 0 0 1 6 0v3H9z" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+      <!-- ══ MOBILE BAR (logo + hamburger) ══ -->
+      <div class="nav-mobile-bar">
+        <a href="https://www.apple.com/" class="nav-mobile-logo" aria-label="Apple">
+          <img src="assets/images/apple-logo.png" alt="Apple" width="15" height="18">
+        </a>
+        <div class="nav-mobile-right">
+          <!-- Search icon on mobile -->
+          <a href="https://www.apple.com/us/search" class="nav-icon" aria-label="Search"
+            style="display:flex;align-items:center;padding:0 8px;height:44px;">
+            <svg width="15" height="15" viewBox="0 0 50 50" style="fill:rgba(0, 0, 1, 0.85);" aria-hidden="true"
+              focusable="false">
+              <path
+                d="M21 3C11.6 3 4 10.6 4 20s7.6 17 17 17c3.35 0 6.48-.98 9.09-2.66l12.28 12.28 4.25-4.25L34.47 30.3A16.88 16.88 0 0 0 38 20c0-9.4-7.6-17-17-17zm0 4c7.2 0 13 5.8 13 13S28.2 33 21 33 8 27.2 8 20 13.8 7 21 7z" />
+            </svg>
+          </a>
+          <!-- Hamburger label -->
+          <label for="nav-check" class="nav-burger" aria-label="Open navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Mobile full-screen drawer -->
+  <div class="nav-drawer" aria-label="Mobile navigation" role="dialog">
+    <ul class="nav-drawer-list" role="list">
+      <li><a href="https://www.apple.com/us/shop/goto/store">Store</a></li>
+      <li><a href="https://www.apple.com/mac/">Mac</a></li>
+      <li><a href="https://www.apple.com/ipad/">iPad</a></li>
+      <li><a href="https://www.apple.com/iphone/">iPhone</a></li>
+      <li><a href="https://www.apple.com/watch/">Watch</a></li>
+      <li><a href="https://www.apple.com/apple-vision-pro/">Vision</a></li>
+      <li><a href="https://www.apple.com/airpods/">AirPods</a></li>
+      <li><a href="https://www.apple.com/tv-home/">TV &amp; Home</a></li>
+      <li><a href="https://www.apple.com/entertainment/">Entertainment</a></li>
+      <li><a href="https://www.apple.com/us/shop/goto/buy_accessories">Accessories</a></li>
+      <li><a href="https://support.apple.com/">Support</a></li>
+    </ul>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+     PAGE CONTENT
+═══════════════════════════════════════════════════════════ -->
+  <main class="page" id="main-content">
+
+    <!-- ───────────────────────────────────────────────────────
+       HERO 1 — MOTHER'S DAY
+       Background: light grey (#f5f5f7)
+       Text: "Mother's Day" large black, subtitle, Shop button
+       Visual: colourful illustrated Apple logo gift box with
+               scattered orange/pink/yellow decorative doodles
+       Matches screenshot exactly.
+  ─────────────────────────────────────────────────────────── -->
+    <section class="hero-md" aria-label="Mother's Day — It's not too late to find the perfect gift">
+
+      <!-- Text -->
+      <div class="hero-md-text">
+        <p class="hero-md-eyebrow">Mother&rsquo;s Day</p>
+        <h1 class="hero-md-title">It&rsquo;s not too late to find<br>the perfect gift.</h1>
+        <a href="https://www.apple.com/us/shop/goto/store" class="btn-shop">Shop</a>
+      </div>
+
+      <!-- Full-width illustrated SVG — gift-wrapped Apple logo + doodles -->
+      <div class="hero-md-canvas" aria-hidden="true" role="img"
+        aria-label="Colorful illustrated Apple logo as a gift with decorative doodles">
+
+        <svg viewBox="0 0 1440 420" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice"
+          aria-hidden="true" focusable="false">
+
+          <!-- ── Background is the section bg colour ── -->
+          <rect width="1440" height="420" fill="#f5f5f7" />
+
+          <!-- ══════════════════════════════════════
+             SCATTERED DOODLES (match screenshot)
+        ════════════════════════════════════════ -->
+
+          <!-- TOP-LEFT area doodles -->
+
+          <!-- Orange squiggle top-left -->
+          <g transform="translate(185,90)">
+            <path d="M0 18 Q8 0 18 8 Q28 18 18 28 Q8 38 0 28" stroke="#ff8c00" stroke-width="5" fill="none"
+              stroke-linecap="round" />
+            <path d="M18 8 Q30 -4 42 8" stroke="#ff8c00" stroke-width="5" fill="none" stroke-linecap="round" />
+          </g>
+
+          <!-- Pink spiral top-left -->
+          <g transform="translate(48,195)">
+            <path d="M14 14 Q14 2 26 2 Q38 2 38 14 Q38 28 24 28 Q10 28 10 14 Q10 6 20 6" stroke="#ff3b8a"
+              stroke-width="5" fill="none" stroke-linecap="round" />
+          </g>
+
+          <!-- Pink hook shape -->
+          <g transform="translate(28,230)">
+            <path d="M0 30 Q0 10 14 4 Q28 -2 32 10 Q36 22 24 26" stroke="#ff3b8a" stroke-width="5.5" fill="none"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </g>
+
+          <!-- Orange flower (left middle) -->
+          <g transform="translate(215,310)">
+            <!-- petals -->
+            <ellipse cx="18" cy="5" rx="6" ry="10" fill="none" stroke="#ff8c00" stroke-width="4"
+              transform="rotate(0  18 18)" />
+            <ellipse cx="18" cy="5" rx="6" ry="10" fill="none" stroke="#ff8c00" stroke-width="4"
+              transform="rotate(60  18 18)" />
+            <ellipse cx="18" cy="5" rx="6" ry="10" fill="none" stroke="#ff8c00" stroke-width="4"
+              transform="rotate(120 18 18)" />
+            <ellipse cx="18" cy="5" rx="6" ry="10" fill="none" stroke="#ff8c00" stroke-width="4"
+              transform="rotate(180 18 18)" />
+            <ellipse cx="18" cy="5" rx="6" ry="10" fill="none" stroke="#ff8c00" stroke-width="4"
+              transform="rotate(240 18 18)" />
+            <ellipse cx="18" cy="5" rx="6" ry="10" fill="none" stroke="#ff8c00" stroke-width="4"
+              transform="rotate(300 18 18)" />
+            <circle cx="18" cy="18" r="6" fill="none" stroke="#ff8c00" stroke-width="4" />
+          </g>
+
+          <!-- Small orange dot -->
+          <circle cx="392" cy="348" r="5" fill="#ffaa00" />
+
+          <!-- Small yellow-orange dot -->
+          <circle cx="406" cy="290" r="4" fill="#ffaa00" />
+
+          <!-- Pink smiley/crescent bottom-left -->
+          <g transform="translate(150,400)">
+            <path d="M0 24 Q12 0 28 10 Q18 30 0 24Z" fill="#ff3b8a" opacity=".9" />
+          </g>
+
+          <!-- Yellow flower bottom-left -->
+          <g transform="translate(178,366)">
+            <ellipse cx="16" cy="4" rx="5" ry="9" fill="none" stroke="#ffaa00" stroke-width="4"
+              transform="rotate(0   16 16)" />
+            <ellipse cx="16" cy="4" rx="5" ry="9" fill="none" stroke="#ffaa00" stroke-width="4"
+              transform="rotate(60  16 16)" />
+            <ellipse cx="16" cy="4" rx="5" ry="9" fill="none" stroke="#ffaa00" stroke-width="4"
+              transform="rotate(120 16 16)" />
+            <ellipse cx="16" cy="4" rx="5" ry="9" fill="none" stroke="#ffaa00" stroke-width="4"
+              transform="rotate(180 16 16)" />
+            <ellipse cx="16" cy="4" rx="5" ry="9" fill="none" stroke="#ffaa00" stroke-width="4"
+              transform="rotate(240 16 16)" />
+            <ellipse cx="16" cy="4" rx="5" ry="9" fill="none" stroke="#ffaa00" stroke-width="4"
+              transform="rotate(300 16 16)" />
+            <circle cx="16" cy="16" r="5" fill="none" stroke="#ffaa00" stroke-width="4" />
+          </g>
+
+          <!-- ── TOP-RIGHT area doodles ── -->
+
+          <!-- Pink flower top right -->
+          <g transform="translate(840,72)">
+            <ellipse cx="18" cy="4" rx="5.5" ry="10" fill="#ff3b8a" opacity=".9" transform="rotate(0   18 18)" />
+            <ellipse cx="18" cy="4" rx="5.5" ry="10" fill="#ff3b8a" opacity=".9" transform="rotate(72  18 18)" />
+            <ellipse cx="18" cy="4" rx="5.5" ry="10" fill="#ff3b8a" opacity=".9" transform="rotate(144 18 18)" />
+            <ellipse cx="18" cy="4" rx="5.5" ry="10" fill="#ff3b8a" opacity=".9" transform="rotate(216 18 18)" />
+            <ellipse cx="18" cy="4" rx="5.5" ry="10" fill="#ff3b8a" opacity=".9" transform="rotate(288 18 18)" />
+            <circle cx="18" cy="18" r="7" fill="#ff7aaa" />
+          </g>
+
+          <!-- Orange hook top right -->
+          <g transform="translate(782,300)">
+            <path d="M26 0 Q42 0 42 16 Q42 32 26 32 Q10 32 10 22" stroke="#ff8c00" stroke-width="5.5" fill="none"
+              stroke-linecap="round" />
+          </g>
+
+          <!-- Orange flower mid-right -->
+          <g transform="translate(982,300)">
+            <ellipse cx="18" cy="4" rx="6" ry="11" fill="none" stroke="#ff8c00" stroke-width="4"
+              transform="rotate(0   18 18)" />
+            <ellipse cx="18" cy="4" rx="6" ry="11" fill="none" stroke="#ff8c00" stroke-width="4"
+              transform="rotate(60  18 18)" />
+            <ellipse cx="18" cy="4" rx="6" ry="11" fill="none" stroke="#ff8c00" stroke-width="4"
+              transform="rotate(120 18 18)" />
+            <ellipse cx="18" cy="4" rx="6" ry="11" fill="none" stroke="#ff8c00" stroke-width="4"
+              transform="rotate(180 18 18)" />
+            <ellipse cx="18" cy="4" rx="6" ry="11" fill="none" stroke="#ff8c00" stroke-width="4"
+              transform="rotate(240 18 18)" />
+            <ellipse cx="18" cy="4" rx="6" ry="11" fill="none" stroke="#ff8c00" stroke-width="4"
+              transform="rotate(300 18 18)" />
+            <circle cx="18" cy="18" r="6" fill="none" stroke="#ff8c00" stroke-width="4" />
+          </g>
+
+          <!-- Small dots right side -->
+          <circle cx="1046" cy="178" r="5" fill="#ffaa00" />
+          <circle cx="1054" cy="200" r="3.5" fill="#ffaa00" />
+
+          <!-- Pink flower far right -->
+          <g transform="translate(1060,270)">
+            <ellipse cx="18" cy="3" rx="5" ry="10" fill="#ff3b8a" opacity=".85" transform="rotate(0   18 18)" />
+            <ellipse cx="18" cy="3" rx="5" ry="10" fill="#ff3b8a" opacity=".85" transform="rotate(72  18 18)" />
+            <ellipse cx="18" cy="3" rx="5" ry="10" fill="#ff3b8a" opacity=".85" transform="rotate(144 18 18)" />
+            <ellipse cx="18" cy="3" rx="5" ry="10" fill="#ff3b8a" opacity=".85" transform="rotate(216 18 18)" />
+            <ellipse cx="18" cy="3" rx="5" ry="10" fill="#ff3b8a" opacity=".85" transform="rotate(288 18 18)" />
+            <circle cx="18" cy="18" r="7" fill="#ff7aaa" />
+          </g>
+
+          <!-- Pink crescent far right -->
+          <g transform="translate(1040,82)">
+            <path d="M0 22 Q12 0 26 10 Q18 28 0 22Z" fill="#ff3b8a" opacity=".88" />
+          </g>
+
+          <!-- Small orange dot far right -->
+          <circle cx="1054" cy="355" r="5.5" fill="#ff8c00" />
+
+          <!-- ══════════════════════════════════════
+             GIFT-WRAPPED APPLE LOGO  (centre)
+             Matches screenshot: orange/red/pink/yellow
+             illustrated Apple shape on a gift box with bow
+        ════════════════════════════════════════ -->
+
+          <!--
+          Apple logo shape: the canonical Apple silhouette,
+          drawn as a filled+stroked path in orange/red gradient,
+          with colourful decorative elements layered on top,
+          sitting on a gift box base with ribbon + bow.
+          Centred at x=720, bottom anchored to y=420.
+        -->
+
+          <g transform="translate(720,420) scale(1,-1)">
+            <!-- Gift box base -->
+            <rect x="-120" y="0" width="240" height="140" rx="10" ry="10" fill="#f5440a" />
+            <!-- Box highlight -->
+            <rect x="-120" y="110" width="240" height="30" rx="0" ry="0" fill="#d43a06" opacity=".4" />
+            <!-- Vertical ribbon on box -->
+            <rect x="-14" y="0" width="28" height="140" fill="#ffdd00" opacity=".9" />
+            <!-- Horizontal ribbon on box -->
+            <rect x="-120" y="56" width="240" height="28" fill="#ffdd00" opacity=".9" />
+
+            <!-- BOW (above box) -->
+            <!-- Left loop -->
+            <path d="M-14 140 Q-90 200 -100 160 Q-110 120 -40 130 Q-14 134 -14 140Z" fill="#ff3b8a" />
+            <!-- Right loop -->
+            <path d="M14 140 Q90 200 100 160 Q110 120 40 130 Q14 134 14 140Z" fill="#ff3b8a" />
+            <!-- Bow knot -->
+            <ellipse cx="0" cy="142" rx="16" ry="12" fill="#e0006e" />
+            <!-- Bow tail left -->
+            <path d="M-10 140 Q-30 120 -28 110" stroke="#ff3b8a" stroke-width="10" fill="none" stroke-linecap="round" />
+            <!-- Bow tail right -->
+            <path d="M10 140 Q30 120 28 110" stroke="#ff3b8a" stroke-width="10" fill="none" stroke-linecap="round" />
+
+            <!-- APPLE LOGO (above box/bow, flipped upright) -->
+            <g transform="translate(0,140) scale(1,-1)">
+              <!--
+              Apple logo path — standard proportions centred at 0,0
+              leaf at top, body of apple below
+              Total height ~180px at this scale
+            -->
+              <g transform="translate(-74, -10) scale(0.182)">
+                <!--
+                Apple logo SVG path (standard vector, public shape)
+                Scaled and positioned to sit above the gift box.
+                The path is the well-known Apple Inc. logo silhouette.
+              -->
+
+                <!-- Leaf (stem + leaf shape) -->
+                <path d="M 406 50
+                        C 406 50 380 -20 450 -80
+                        C 450 -80 520 20 406 50 Z" fill="#57c84d" stroke="none" />
+
+                <!-- Apple body — rendered as layered coloured sections
+                   to match the illustrated/doodle aesthetic in screenshot -->
+
+                <!-- Full apple body silhouette (orange base) -->
+                <path d="
+                M 406 90
+                C 350 90 280 130 250 200
+                C 220 270 230 370 270 450
+                C 310 530 360 590 406 590
+                C 452 590 502 530 542 450
+                C 582 370 592 270 562 200
+                C 532 130 462 90 406 90 Z
+              " fill="#f5440a" />
+
+                <!-- Left bite (makes it look like an apple) -->
+                <path d="
+                M 240 250
+                C 200 230 180 270 200 300
+                C 220 330 260 320 260 310
+              " fill="#f5f5f7" />
+
+                <!-- Colourful doodle overlays on apple body -->
+
+                <!-- Tulip/flower left -->
+                <g transform="translate(290, 200)">
+                  <path d="M0 60 Q0 20 30 10 Q60 0 60 40 Q60 80 30 80 Q0 80 0 60Z" fill="#ffdd00" opacity=".9" />
+                  <rect x="28" y="0" width="4" height="30" fill="#4caf50" />
+                </g>
+
+                <!-- Spiral / swirl centre -->
+                <g transform="translate(370, 280)">
+                  <path d="M36 36 Q36 10 60 10 Q84 10 84 36 Q84 62 58 62 Q32 62 32 38 Q32 18 52 18" stroke="#ff3b8a"
+                    stroke-width="8" fill="none" stroke-linecap="round" />
+                </g>
+
+                <!-- Small tulip right -->
+                <g transform="translate(460, 190)">
+                  <path d="M0 55 Q0 20 26 8 Q52 -4 52 34 Q52 70 26 72 Q0 74 0 55Z" fill="#ff3b8a" opacity=".9" />
+                  <rect x="24" y="-6" width="4" height="28" fill="#4caf50" />
+                </g>
+
+                <!-- Yellow leaf accents -->
+                <path d="M300 380 Q320 340 360 380 Q380 420 340 430 Q300 440 300 380Z" fill="#ffdd00" opacity=".85" />
+                <path d="M480 360 Q490 330 520 360 Q540 390 510 400 Q480 410 480 360Z" fill="#ffaa00" opacity=".8" />
+
+                <!-- Pink squiggle overlay -->
+                <path d="M340 460 Q360 430 390 460 Q420 490 440 460" stroke="#ff3b8a" stroke-width="10" fill="none"
+                  stroke-linecap="round" />
+
+                <!-- Orange dots scatter on apple -->
+                <circle cx="310" cy="350" r="10" fill="#ff8c00" opacity=".7" />
+                <circle cx="500" cy="320" r="8" fill="#ffaa00" opacity=".7" />
+                <circle cx="420" cy="510" r="9" fill="#ff3b8a" opacity=".65" />
+
+              </g>
+            </g><!-- end apple logo group -->
+
+          </g><!-- end gift group -->
+
+        </svg>
+      </div>
+    </section>
+
+
+    <!-- ───────────────────────────────────────────────────────
+       HERO 2 — iPHONE FAMILY
+  ─────────────────────────────────────────────────────────── -->
+    <section class="hero-iphone" aria-label="iPhone — Meet the latest iPhone lineup">
+
+      <div class="hero-iphone-text">
+        <p class="hero-iphone-eyebrow">iPhone</p>
+        <h2 class="hero-iphone-title">Meet the latest<br>iPhone lineup.</h2>
+        <p class="hero-iphone-sub">More power. More possibilities.</p>
+        <div class="hero-iphone-cta">
+          <a href="https://www.apple.com/iphone/" class="btn-outline-dark">Learn more</a>
+          <a href="https://www.apple.com/us/shop/goto/buy_iphone" class="btn-filled-blue">Shop iPhone</a>
+        </div>
+      </div>
+
+      <div class="iphone-devices" role="img"
+        aria-label="iPhone 17 Pro Max, iPhone 17 Pro, iPhone 17, iPhone Air, iPhone 17e">
+        <img src="assets/images/hero_iphone_family__fuz5j2v5xx6y_large_2x.jpg"
+          alt="iPhone 17 lineup — Pro Max, Pro, iPhone 17, Air, and iPhone 17e">
+      </div>
+    </section>
+
+
+    <!-- ───────────────────────────────────────────────────────
+       PRODUCT TILE GRID
+  ─────────────────────────────────────────────────────────── -->
+    <section class="grid" aria-label="Featured Apple products">
+
+      <!-- ┌─────────────────────────── Apple Watch Series 11 (full) ──┐ -->
+      <article class="tile tile-full tile-gray" aria-label="Apple Watch Series 11">
+        <div class="tile-text">
+          <p class="tile-eyebrow">Apple Watch Series 11</p>
+          <h2 class="tile-title">The ultimate way<br>to watch your health.</h2>
+          <div class="tile-cta">
+            <a href="https://www.apple.com/apple-watch-series-11/" class="link-blue">Learn more</a>
+            <a href="https://www.apple.com/us/shop/goto/buy_watch/apple_watch_series_11"
+              class="btn-round btn-round-blue">Buy</a>
+          </div>
+        </div>
+        <div class="tile-visual tile-visual-center" role="img"
+          aria-label="Apple Watch Series 11 in Rose Gold aluminium showing sleep score of 82">
+          <img src="assets/images/hero_apple_watch_series_11__bdz1mml4dx6q_large_2x.jpg"
+            alt="Apple Watch Series 11 in Rose Gold showing sleep score 82">
+        </div>
+      </article>
+
+      <!-- ┌──────────────── Pride Watch ──┐ -->
+      <article class="tile tile-black" aria-label="Apple Watch Pride Edition Sport Loop">
+        <div class="tile-text">
+          <p class="tile-eyebrow tile-eyebrow-muted">Apple Watch</p>
+          <h2 class="tile-title tile-title-sm">Radiate Pride<br>with the vibrant<br>new Pride Edition<br>Sport Loop.
+          </h2>
+          <div class="tile-cta">
+            <a href="https://www.apple.com/us/shop/goto/product/MJ5C4" class="btn-round btn-round-blue-lt">Buy</a>
+          </div>
+        </div>
+        <div class="tile-visual tile-visual-center" role="img"
+          aria-label="Apple Watch with rainbow Pride Edition Sport Loop band">
+          <img src="assets/images/promo_apple_watch_pride__9efimjc2tteu_medium_2x.jpg"
+            alt="Apple Watch with rainbow Pride Edition Sport Loop band">
+        </div>
+      </article>
+
+      <!-- ┌──────────────── MacBook Neo ──┐ -->
+      <article class="tile tile-gray" aria-label="MacBook Neo">
+        <div class="tile-text">
+          <p class="tile-eyebrow">MacBook Neo</p>
+          <h2 class="tile-title tile-title-sm">Amazing Mac.<br>Surprising price.</h2>
+          <div class="tile-cta">
+            <a href="https://www.apple.com/macbook-neo/" class="link-blue">Learn more</a>
+            <a href="https://www.apple.com/us/shop/goto/buy_mac/macbook_neo" class="btn-round btn-round-blue">Buy</a>
+          </div>
+        </div>
+        <div class="tile-visual tile-visual-padded" role="img"
+          aria-label="MacBook Neo showing a colourful gradient display">
+          <img src="assets/images/promo_macbook_neo__ghopmquousii_large_2x.jpg"
+            alt="MacBook Neo showing a colourful gradient display">
+        </div>
+      </article>
+
+      <!-- ┌─────────────────────────── Apple Business (full) ──┐ -->
+      <article class="tile tile-blue-tint" aria-label="Apple Business">
+        <div class="tile-text">
+          <p class="tile-eyebrow">Apple Business</p>
+          <h2 class="tile-title tile-title-sm">The tools you need to run<br>and grow your business.<br>All in one
+            place.<sup>1</sup></h2>
+          <div class="tile-cta">
+            <a href="https://business.apple.com/" class="link-blue">Learn more</a>
+          </div>
+        </div>
+        <div class="tile-visual tile-visual-center" role="img"
+          aria-label="Apple app icons for iCloud, Calendar, Maps, Mail, and more">
+          <img src="assets/images/promo_apple_business__fi88n3dz0emq_large_2x.jpg"
+            alt="Apple Business app icons including iCloud, Calendar, Maps, and Mail">
+        </div>
+      </article>
+
+      <!-- ┌──────────────── iPad Air M4 ──┐ -->
+      <article class="tile tile-gray" aria-label="iPad Air powered by M4">
+        <div class="tile-text">
+          <p class="tile-eyebrow">iPad Air</p>
+          <h2 class="tile-title tile-title-sm">Now supercharged<br>by M4.</h2>
+          <div class="tile-cta">
+            <a href="https://www.apple.com/ipad-air/" class="link-blue">Learn more</a>
+            <a href="https://www.apple.com/us/shop/goto/buy_ipad/ipad_air" class="btn-round btn-round-blue">Buy</a>
+          </div>
+        </div>
+        <div class="tile-visual" role="img" aria-label="Two iPad Air models in Starlight and Blue">
+          <img src="assets/images/promo_ipad_air_m4__f9ie3h3pzr6m_large_2x.jpg"
+            alt="Two iPad Air models in Starlight and Blue">
+        </div>
+      </article>
+
+      <!-- ┌──────────────── Apple Trade In ──┐ -->
+      <article class="tile tile-warm" aria-label="Apple Trade In">
+        <div class="tile-text">
+          <p class="tile-eyebrow">Apple Trade In</p>
+          <h2 class="tile-title tile-title-sm">Get up to<br>$195&ndash;$685 in credit<br>when you trade
+            in<br>iPhone&nbsp;13 or higher.<sup>2</sup></h2>
+          <div class="tile-cta">
+            <a href="https://www.apple.com/us/shop/goto/trade_in" class="link-blue">Get your estimate</a>
+          </div>
+        </div>
+        <div class="tile-visual" role="img" aria-label="Old iPhone traded in for new iPhone">
+          <img src="assets/images/promo_iphone_tradein__bugw15ka691e_large_2x.jpg"
+            alt="Old iPhone traded in for a new iPhone">
+        </div>
+      </article>
+
+      <!-- ┌─────────────────────────── Apple Card (full) ──┐ -->
+      <article class="tile tile-warm" aria-label="Apple Card">
+        <div class="tile-text">
+          <p class="tile-eyebrow">Apple Card</p>
+          <h2 class="tile-title tile-title-sm">Get up to 3% Daily Cash back<br>with every purchase.<sup>3</sup></h2>
+          <div class="tile-cta">
+            <a href="https://www.apple.com/apple-card/" class="link-blue">Learn more</a>
+            <a href="https://card.apple.com/apply" class="btn-round btn-round-blue">Apply now</a>
+          </div>
+        </div>
+        <div class="tile-visual tile-visual-center" role="img"
+          aria-label="Apple Card in titanium white with Goldman Sachs chip">
+          <img src="assets/images/promo_apple_card__5cm7draujpey_large_2x.jpg" alt="Apple Card in titanium white">
+        </div>
+      </article>
+
+    </section><!-- /.grid -->
+
+
+    <!-- ───────────────────────────────────────────────────────
+       ENTERTAINMENT
+  ─────────────────────────────────────────────────────────── -->
+    <section class="entertainment" aria-label="Apple TV+ and entertainment services">
+      <header class="ent-header">
+        <h2 class="ent-title">Endless entertainment.</h2>
+      </header>
+
+      <div class="ent-scroll" role="list" aria-label="Entertainment content cards">
+
+        <a class="ent-card" href="https://tv.apple.com/" role="listitem"
+          aria-label="Live MLB games every Friday on Apple TV+">
+          <div class="ent-thumb ent-thumb-mlb" aria-hidden="true">⚾</div>
+          <div class="ent-body">
+            <p class="ent-tag">See the schedule</p>
+            <p class="ent-name">Live MLB games, every Friday.</p>
+          </div>
+        </a>
+
+        <a class="ent-card" href="https://tv.apple.com/" role="listitem"
+          aria-label="Side Hustle — Comedy now streaming on Apple TV+">
+          <div class="ent-thumb ent-thumb-comedy" aria-hidden="true">💰</div>
+          <div class="ent-body">
+            <p class="ent-tag">Stream now &middot; Comedy</p>
+            <p class="ent-name">Everyone&rsquo;s got a side hustle.</p>
+          </div>
+        </a>
+
+        <a class="ent-card" href="https://tv.apple.com/" role="listitem" aria-label="F1 racing live on Apple TV+">
+          <div class="ent-thumb ent-thumb-f1" aria-hidden="true">🏎️</div>
+          <div class="ent-body">
+            <p class="ent-tag">F1 on Apple TV</p>
+            <p class="ent-name">Every Grand Prix,&trade; live and on demand&mdash;all in one place.</p>
+          </div>
+        </a>
+
+        <a class="ent-card" href="https://tv.apple.com/" role="listitem" aria-label="Mystery drama now streaming">
+          <div class="ent-thumb ent-thumb-mystery" aria-hidden="true">🏝️</div>
+          <div class="ent-body">
+            <p class="ent-tag">Stream now &middot; Mystery</p>
+            <p class="ent-name">Welcome to the island, please enjoy your stay.</p>
+          </div>
+        </a>
+
+        <a class="ent-card" href="https://tv.apple.com/" role="listitem" aria-label="MLS Season Pass on Apple TV+">
+          <div class="ent-thumb ent-thumb-mls" aria-hidden="true">⚽</div>
+          <div class="ent-body">
+            <p class="ent-tag">MLS on Apple TV</p>
+            <p class="ent-name">Watch every club, every match, live&mdash;all season long.</p>
+          </div>
+        </a>
+
+        <a class="ent-card" href="https://tv.apple.com/" role="listitem" aria-label="Drama series on Apple TV+">
+          <div class="ent-thumb ent-thumb-drama" aria-hidden="true">🎭</div>
+          <div class="ent-body">
+            <p class="ent-tag">Stream now &middot; Drama</p>
+            <p class="ent-name">Is it a crime to want more?</p>
+          </div>
+        </a>
+
+        <a class="ent-card" href="https://tv.apple.com/" role="listitem" aria-label="Thriller series now streaming">
+          <div class="ent-thumb ent-thumb-thriller" aria-hidden="true">🕵️</div>
+          <div class="ent-body">
+            <p class="ent-tag">Stream now &middot; Thriller</p>
+            <p class="ent-name">They shared everything but the truth.</p>
+          </div>
+        </a>
+
+        <a class="ent-card" href="https://tv.apple.com/" role="listitem"
+          aria-label="Ted Lasso — Catch up now on Apple TV+">
+          <div class="ent-thumb ent-thumb-ted" aria-hidden="true">⚽</div>
+          <div class="ent-body">
+            <p class="ent-tag">Catch up now &middot; Comedy</p>
+            <p class="ent-name">New season August 5. You better believe it.</p>
+          </div>
+        </a>
+
+        <a class="ent-card" href="https://tv.apple.com/" role="listitem"
+          aria-label="Monarch Legacy of Monsters on Apple TV+">
+          <div class="ent-thumb ent-thumb-adventure" aria-hidden="true">🦎</div>
+          <div class="ent-body">
+            <p class="ent-tag">Stream now &middot; Adventure</p>
+            <p class="ent-name">A new threat will surface.</p>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+
+    <!-- ───────────────────────────────────────────────────────
+       SERVICES TRIO
+  ─────────────────────────────────────────────────────────── -->
+    <section class="services" aria-label="Apple subscription services">
+
+      <article class="svc-tile svc-fitness" aria-label="Apple Fitness+">
+        <div class="svc-icon" aria-hidden="true">🏃</div>
+        <h3 class="svc-name">Apple Fitness+</h3>
+        <p class="svc-sub">World-class workouts. Right on your device.</p>
+        <a href="https://www.apple.com/apple-fitness-plus/" class="svc-link">Watch now</a>
+      </article>
+
+      <article class="svc-tile svc-music" aria-label="Apple Music">
+        <div class="svc-icon" aria-hidden="true">🎵</div>
+        <h3 class="svc-name">Apple Music</h3>
+        <p class="svc-sub">100 million songs. Zero ads. Lossless audio.</p>
+        <a href="https://www.apple.com/apple-music/" class="svc-link">Listen now</a>
+      </article>
+
+      <article class="svc-tile svc-arcade" aria-label="Apple Arcade">
+        <div class="svc-icon" aria-hidden="true">🎮</div>
+        <h3 class="svc-name">Apple Arcade</h3>
+        <p class="svc-sub">200+ games. No ads. No in-app purchases.</p>
+        <a href="https://www.apple.com/apple-arcade/" class="svc-link">Play now</a>
+      </article>
+
+    </section>
+
+
+    <!-- ───────────────────────────────────────────────────────
+       PROMO STRIP
+  ─────────────────────────────────────────────────────────── -->
+    <div class="promo-strip" role="complementary">
+      <p>
+        <strong>Apple Store.</strong>
+        The best way to buy the products you love.&ensp;
+        <a href="https://www.apple.com/us/shop/goto/store">Shop now &rsaquo;</a>
+      </p>
+    </div>
+
+  </main><!-- /.page -->
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════════════ -->
+  <footer role="contentinfo">
+
+    <!-- Footnotes -->
+    <section class="footer-notes" aria-label="Legal footnotes">
+      <p>1. Feature and service availability varies by country and region.
+        <a href="https://support.apple.com/en-us/126603">Learn more</a>.
+      </p>
+      <p>2. Trade&#8209;in values will vary based on the condition, year, and
+        configuration of your eligible trade&#8209;in device. Not all devices
+        are eligible for credit. You must be at least the age of majority to
+        be eligible to trade in for credit or for an Apple Gift Card. Actual
+        value awarded is based on receipt of a qualifying device matching the
+        description provided when estimate was made. Sales tax may be assessed
+        on full value of a new device purchase. In&#8209;store trade&#8209;in
+        requires presentation of a valid photo ID (local law may require saving
+        this information).</p>
+      <p>3. Apple Card is subject to credit approval, available only for
+        qualifying applicants in the United States, and issued by Goldman Sachs
+        Bank USA, Salt Lake City Branch. Neither Apple Inc. nor Apple Payments
+        Services LLC is a bank.</p>
+    </section>
+
+    <!-- Link columns -->
+    <nav class="footer-cols" aria-label="Footer site links">
+
+      <div class="footer-col">
+        <h4 class="footer-col-head">Shop and Learn</h4>
+        <ul>
+          <li><a href="https://www.apple.com/us/shop/goto/store">Store</a></li>
+          <li><a href="https://www.apple.com/mac/">Mac</a></li>
+          <li><a href="https://www.apple.com/ipad/">iPad</a></li>
+          <li><a href="https://www.apple.com/iphone/">iPhone</a></li>
+          <li><a href="https://www.apple.com/watch/">Watch</a></li>
+          <li><a href="https://www.apple.com/apple-vision-pro/">Vision</a></li>
+          <li><a href="https://www.apple.com/airpods/">AirPods</a></li>
+          <li><a href="https://www.apple.com/tv-home/">TV &amp; Home</a></li>
+          <li><a href="https://www.apple.com/airtag/">AirTag</a></li>
+          <li><a href="https://www.apple.com/us/shop/goto/buy_accessories">Accessories</a></li>
+          <li><a href="https://www.apple.com/us/shop/goto/giftcards">Gift Cards</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-head">Apple Wallet</h4>
+        <ul>
+          <li><a href="https://www.apple.com/wallet/">Wallet</a></li>
+          <li><a href="https://www.apple.com/apple-card/">Apple Card</a></li>
+          <li><a href="https://www.apple.com/apple-pay/">Apple Pay</a></li>
+          <li><a href="https://www.apple.com/apple-cash/">Apple Cash</a></li>
+        </ul>
+        <h4 class="footer-col-head" style="margin-top:22px">Account</h4>
+        <ul>
+          <li><a href="https://account.apple.com/">Manage Your Apple Account</a></li>
+          <li><a href="https://www.apple.com/us/shop/goto/account">Apple Store Account</a></li>
+          <li><a href="https://www.icloud.com">iCloud.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-head">Entertainment</h4>
+        <ul>
+          <li><a href="https://www.apple.com/apple-one/">Apple One</a></li>
+          <li><a href="https://www.apple.com/apple-tv/">Apple TV+</a></li>
+          <li><a href="https://www.apple.com/apple-music/">Apple Music</a></li>
+          <li><a href="https://www.apple.com/apple-arcade/">Apple Arcade</a></li>
+          <li><a href="https://www.apple.com/apple-fitness-plus/">Apple Fitness+</a></li>
+          <li><a href="https://www.apple.com/apple-news/">Apple News+</a></li>
+          <li><a href="https://www.apple.com/apple-podcasts/">Apple Podcasts</a></li>
+          <li><a href="https://www.apple.com/apple-books/">Apple Books</a></li>
+          <li><a href="https://www.apple.com/app-store/">App Store</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-head">Apple Store</h4>
+        <ul>
+          <li><a href="https://www.apple.com/retail/">Find a Store</a></li>
+          <li><a href="https://www.apple.com/retail/geniusbar/">Genius Bar</a></li>
+          <li><a href="https://www.apple.com/today/">Today at Apple</a></li>
+          <li><a href="https://www.apple.com/today/groups/">Group Reservations</a></li>
+          <li><a href="https://www.apple.com/today/camp/">Apple Camp</a></li>
+          <li><a href="https://apps.apple.com/us/app/apple-store/id375380948">Apple Store App</a></li>
+          <li><a href="https://www.apple.com/us/shop/goto/special_deals">Certified Refurbished</a></li>
+          <li><a href="https://www.apple.com/us/shop/goto/trade_in">Apple Trade In</a></li>
+          <li><a href="https://www.apple.com/financing/">Financing</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-head">For Business</h4>
+        <ul>
+          <li><a href="https://www.apple.com/business/">Apple and Business</a></li>
+          <li><a href="https://www.apple.com/retail/business/">Shop for Business</a></li>
+        </ul>
+        <h4 class="footer-col-head" style="margin-top:22px">For Education</h4>
+        <ul>
+          <li><a href="https://www.apple.com/education/">Apple and Education</a></li>
+          <li><a href="https://www.apple.com/us/shop/goto/buy_iphone/for_education">Shop for University</a></li>
+        </ul>
+        <h4 class="footer-col-head" style="margin-top:22px">For Healthcare</h4>
+        <ul>
+          <li><a href="https://www.apple.com/healthcare/">Apple in Healthcare</a></li>
+          <li><a href="https://www.apple.com/health/">Health on Apple Watch</a></li>
+        </ul>
+        <h4 class="footer-col-head" style="margin-top:22px">Apple Values</h4>
+        <ul>
+          <li><a href="https://www.apple.com/accessibility/">Accessibility</a></li>
+          <li><a href="https://www.apple.com/environment/">Environment</a></li>
+          <li><a href="https://www.apple.com/privacy/">Privacy</a></li>
+        </ul>
+      </div>
+
+    </nav>
+
+    <!-- Bottom bar -->
+    <div class="footer-bottom">
+      <p class="footer-copy">Copyright &copy; 2026 Apple Inc. All rights reserved.</p>
+      <nav class="footer-policy" aria-label="Legal links">
+        <a href="https://www.apple.com/legal/privacy/">Privacy Policy</a>
+        <a href="https://www.apple.com/legal/internet-services/terms/site.html">Terms of Use</a>
+        <a href="https://www.apple.com/us/shop/goto/help/sales_refunds">Sales and Refunds</a>
+        <a href="https://www.apple.com/legal/">Legal</a>
+        <a href="https://www.apple.com/sitemap/">Site Map</a>
+        <a href="#">United States</a>
+      </nav>
+    </div>
+
+  </footer>
+
+</body>
+
+</html>
