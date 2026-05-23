@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WebWeavers — Sign In</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <div class="bg-grid"></div>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+
+  <div class="page-wrapper">
+
+    <!-- Left Panel -->
+    <aside class="left-panel">
+      <div class="brand">
+        <div class="logo-mark">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 8 L24 4 L40 8 L44 24 L40 40 L24 44 L8 40 L4 24 Z" stroke="var(--accent)" stroke-width="1.5" fill="none"/>
+            <path d="M16 16 L24 12 L32 16 L36 24 L32 32 L24 36 L16 32 L12 24 Z" stroke="var(--accent)" stroke-width="1" fill="none" opacity="0.5"/>
+            <circle cx="24" cy="24" r="4" fill="var(--accent)"/>
+          </svg>
+        </div>
+        <h1 class="brand-name">WebWeavers</h1>
+      </div>
+
+      <div class="tagline-block">
+        <p class="tagline">Welcome<br/><em>back,</em><br/>creator.</p>
+        <div class="divider-line"></div>
+        <p class="sub-tagline">Your canvas is waiting.<br/>Pick up right where you left off.</p>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat">
+          <span class="stat-num">12k+</span>
+          <span class="stat-label">Creators</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat">
+          <span class="stat-num">98%</span>
+          <span class="stat-label">Satisfaction</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat">
+          <span class="stat-num">4.9★</span>
+          <span class="stat-label">Rating</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Right Panel -->
+    <main class="right-panel">
+      <div class="form-card">
+
+        <div class="form-header">
+          <h2>Sign In</h2>
+          <p>Continue your journey</p>
+        </div>
+
+        <div class="form-body">
+
+          <div class="field-group">
+            <label for="login-email">Email Address</label>
+            <div class="input-wrap">
+              <input type="email" id="login-email" name="email" autocomplete="off"/>
+              <span class="field-line"></span>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="login-password">Password</label>
+            <div class="input-wrap">
+              <input type="password" id="login-password" name="password" autocomplete="off"/>
+              <span class="field-line"></span>
+            </div>
+          </div>
+
+          <div class="forgot-row">
+            <a href="#" class="forgot-link">Forgot password?</a>
+          </div>
+
+          <button class="cta-btn" type="button" onclick="login()">
+            <span class="btn-text">Enter the Studio</span>
+            <span class="btn-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12H19M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="btn-shimmer"></span>
+          </button>
+
+          <p class="bottom-link">New here? <a href="index.html">Create an account</a></p>
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+
+</body>
+</html>
